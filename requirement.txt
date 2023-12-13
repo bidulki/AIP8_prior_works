@@ -1,0 +1,14 @@
+!pip install mxnet
+!pip install gluonnlp
+!pip install sentencepiece
+!pip install sentence_transformers
+!pip install 'git+https://github.com/SKTBrain/KoBERT.git#egg=kobert_tokenizer&subdirectory=kobert_hf'
+!git clone https://github.com/seujung/KoBART-summarization.git
+!git clone https://github.com/SKT-AI/KoBART.git
+!mv ./KoBART/kobart KoBART-summarization/kobart
+!pip install loguru
+!pip install lightning
+!pip install boto3
+# %cd KoBART-summarization/
+
+!python get_model_binary.py --model_binary /content/drive/MyDrive/AI_project/weight/epoch=01-val_loss=0.993.ckpt
